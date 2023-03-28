@@ -12,7 +12,7 @@
   (add-to-list 'load-path path))
 
 (defun aa/require-file-list (list) 
-    (dolist(p package-file-list)
+    (dolist(p list)
       (require (intern (file-name-sans-extension p)))))
 
 (defun aa/require-local-packages-in(packages-dir)
