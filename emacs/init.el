@@ -20,23 +20,13 @@
     (aa/register-conf-path packages-dir)
     (aa/require-file-list package-file-list)))
 
-(aa/require-local-packages-in "~/.emacs.d/local-packages/")
+(aa/require-local-packages-in (concat user-emacs-directory "local-packages/"))
 
-;;
-;; end of file
-;;
+;; By default, the customisation options are stored in the
+;; .emacs configuration file.
+;; These lines are moving the configuration automatically generated
+;; by custom system in a separate file.
+;; http://xahlee.info/emacs/emacs/emacs_custom_system.html
+(setq custom-file (concat user-emacs-directory "custom.el"))
+(load custom-file)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(fontawesome projectile doom-themes git-gutter-fringe git-gutter savehist ligature blackout zenburn-theme vertico use-package orderless color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized))
- '(warning-suppress-types '((use-package))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
