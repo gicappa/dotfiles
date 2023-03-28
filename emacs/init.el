@@ -1,4 +1,4 @@
-1;; _*_ lexical-binding: t _*_
+;; _*_ lexical-binding: t _*_
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; GK's Emacs Setup ;;
